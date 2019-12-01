@@ -14,6 +14,7 @@ import br.ucsal.roteiro.dao.EnderecoDAO;
 import br.ucsal.roteiro.dao.EstudanteDAO;
 import br.ucsal.roteiro.dao.PapelDAO;
 import br.ucsal.roteiro.dao.RoteiroDAO;
+import br.ucsal.roteiro.dao.RoteiroEstudanteDAO;
 import br.ucsal.roteiro.dao.UsuarioDAO;
 import br.ucsal.roteiro.model.Endereco;
 import br.ucsal.roteiro.model.Estudante;
@@ -82,7 +83,7 @@ public class EstudanteSalvarServlet extends HttpServlet {
 
 
 			Usuario usuario = new Usuario(null, nome, nomeSocial, email, cpf, senha, endereco, p);
-			//estudante.setUsuario(usuario); //apagar depois
+			//estudante.setUsuario(usuario); 
 			usuario.setEstudante(estudante);
 			endereco.setUsuario(usuario);
 			EnderecoDAO.inserirEndereco(endereco);
@@ -97,6 +98,7 @@ public class EstudanteSalvarServlet extends HttpServlet {
 			endereco.setNumero(numero);
 
 			estudante.setCurso(CursoDAO.buscarCurso(Integer.parseInt(sIdCurso)));
+			estudante.setRoteiros(roteiros);
 
 			Usuario usuario = UsuarioDAO.buscarUsuario(Integer.parseInt(idUserS));
 			usuario.setNome(nome);
@@ -108,6 +110,8 @@ public class EstudanteSalvarServlet extends HttpServlet {
 			usuario.setEndereco(endereco);
 			usuario.setEstudante(estudante);
 			UsuarioDAO.EditarUsuario(usuario);
+			RoteiroEstudanteDAO.deletarRoteirosDoEstudante(estudante.getId());
+			RoteiroEstudanteDAO.inserRoteiroEstudante(estudante);
 		}
 
 		response.sendRedirect("./EstudanteListar");
