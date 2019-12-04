@@ -55,8 +55,4 @@ public class ProgramacaoForm extends HttpServlet {
 		request.setAttribute("roteiros", roteiros);
 		request.getRequestDispatcher("programacaoForm.jsp").forward(request, response);
 	}
-
-
-	
-
 }

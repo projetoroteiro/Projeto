@@ -13,8 +13,6 @@
 </head>
 <body class="body">
 
-<a href='./ProgramacaoLista'>Listar Programações</a>
-
 <div class="container">
 		<div class="row">
 			<div class="col-lg-3"></div>

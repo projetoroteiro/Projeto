@@ -2,6 +2,7 @@ package br.ucsal.roteiro.model;
 
 public class RoteiroPonto {
 	private Integer id;
+	//ordem
 	private Integer idRoteiro;
 	private Integer idPonto;
 	

@@ -30,8 +30,7 @@
 			<div class="col-lg-10">
 				<div class="container centered" id="conteudo">
 					<div class="row centered">
-						<h4 class="titulo">PERFIL</h4>
-						<h1>Olá ${usuario.nome}</h1>
+						<h4 class="titulo">Olá, ${usuario.nome}</h4>
 					</div>
 					<hr>
 					<div class="row">

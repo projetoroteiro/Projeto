@@ -12,7 +12,7 @@
 	<div class="collapse navbar-collapse" id="navbarNavDropdown">
 		<ul class="navbar-nav">
 			<li class="nav-item active itensNavbar"><a class="nav-link "
-				href="./Perfil">INÍCIO<span class="sr-only">(current)</span></a></li>
+				href="dashboardAdmin.jsp">INÍCIO<span class="sr-only">(current)</span></a></li>
 
 			<li class="nav-item dropdown itensNavbar"><a
 				class="nav-link dropdown-toggle" href="#"

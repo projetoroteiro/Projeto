@@ -71,7 +71,7 @@
 		</div>
 	</div>
 
-	<a href="./Painel">Painel</a>
+
 	<%@include file="./includes/footer.jsp"%>
 </body>
 </html>

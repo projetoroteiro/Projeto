@@ -30,9 +30,9 @@ public class LoginServlet extends HttpServlet {
 		if(usuarioLogado != null) {
 			request.getSession().setAttribute("usuario", usuario);
 			if(usuario.getPapel().getId()==2) //adm
-				response.sendRedirect("./PerfilEstudante");
+				request.getRequestDispatcher("dashboardEstudante.jsp").forward(request, response);;
 			if(usuario.getPapel().getId()==1) {
-				response.sendRedirect("./PerfilAdministrador");
+				request.getRequestDispatcher("dashboardAdmin.jsp").forward(request, response);;
 				
 			}
 		}else {

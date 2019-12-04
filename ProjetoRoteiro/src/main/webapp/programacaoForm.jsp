@@ -36,7 +36,7 @@
 						<div class="form-group col-lg-4">
 								<label for="dia">Data</label> <input class="form-control"
 									type="date" id="dia" name="dia"
-									value="${programacao.data}">
+									value="${programacao.dia}">
 						</div>
 						<div class="form-group col-lg-4">
 								<label for="horaIda">Hora de saída</label> <input class="form-control"
