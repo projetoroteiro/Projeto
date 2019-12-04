@@ -136,6 +136,7 @@ public class EstudanteDAO {
 	}
 
 	public static void deletarEstudantePeloUsuario(Integer id) {
+		
 		String sql="delete from estudantes where id_usuario=?";
 		try {
 			PreparedStatement pstmt= con.prepareStatement(sql);

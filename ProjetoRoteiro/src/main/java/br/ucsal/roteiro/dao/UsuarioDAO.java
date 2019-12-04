@@ -160,6 +160,7 @@ public class UsuarioDAO {
 
 	public static void deletarUsuario(Integer id) {
 		Integer idEnd=UsuarioDAO.buscarUsuario(id).getEndereco().getId();
+		
 		String sql = "delete from usuarios where id=?";
 		try {
 			PreparedStatement pstmt= con.prepareStatement(sql);
