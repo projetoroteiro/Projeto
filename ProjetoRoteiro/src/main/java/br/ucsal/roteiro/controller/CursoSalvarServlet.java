@@ -46,6 +46,8 @@ public class CursoSalvarServlet extends HttpServlet {
 			curso.setDuracao(Integer.parseInt(duracao));
 			CursoDAO.editarCurso(curso);
 		}else {
+			
+			
 			curso.setInstituicao(InstituicaoDAO.buscarInstituicao(Integer.parseInt(instituicao)));
 			curso.setNome(nome);
 			curso.setDuracao(Integer.parseInt(duracao));
